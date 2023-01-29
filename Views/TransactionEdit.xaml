@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="False"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppControleFinanceiro.Views.TransactionEdit"
+             Title="TransactionEdit">
+    <VerticalStackLayout Spacing="10">
+        <Border BackgroundColor="Black" Stroke="Transparent" Margin="15" Padding="15" StrokeShape="RoundRectangle 30" >
+            <Grid RowDefinitions="Auto" ColumnDefinitions="*, 30">
+                <Label 
+                Text="Atualizar"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                TextColor="White"
+                Grid.Row="0"
+                Grid.Column="0"/>
+
+                <!--<Image               
+                HorizontalOptions="Center"
+                Source="close.png"
+                Grid.Row="0"
+                Grid.Column="1"
+                WidthRequest="17"
+                HeightRequest="17">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>-->
+            </Grid>
+        </Border>
+
+        <Grid ColumnDefinitions="*,*" Margin="30,0">
+            <RadioButton IsChecked="True" Content="Receita" />
+            <RadioButton HorizontalOptions="End" Grid.Column="1" Content="Despesa" />
+        </Grid>
+
+        <Entry Placeholder="Nome" Margin="15,0" />
+        <Entry Placeholder="Valor" Margin="15,0"/>
+
+        <Label Text="Data da transferencia:"  Margin="15,0"/>
+        <DatePicker Margin="15,0" />
+
+        <Button Text="Salvar" Margin="15" HorizontalOptions="Fill"/>
+
+    </VerticalStackLayout>
+</ContentPage>
